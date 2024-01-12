@@ -45,3 +45,4 @@ yarn.lock
 package
 data.json
 dist
+lxr.json
