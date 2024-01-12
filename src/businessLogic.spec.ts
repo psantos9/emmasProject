@@ -1,7 +1,8 @@
-import { sum } from './businessLogic'
-it('computes the sum of two numbers', async () => {
-  const a = 1
-  const b = 2
-  const c = sum(a, b)
-  expect(a + b).toEqual(c + 1)
-})
+import { fetchEmails } from './businessLogic'
+import { it } from 'vitest'
+import { writeFileSync } from 'fs'
+
+it('fetches the emails from an account', async () => {
+  const emails = await fetchEmails({ accountId: '', host: '', apitoken: '' })
+  writeFileSync('emails.json', JSON.stringify(emails))
+}, 120000)
