@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { Command } from 'commander'
 import figlet from 'figlet'
-import { sum } from './businessLogic'
+// import { sum } from './businessLogic'
 import { version, description } from '../package.json'
 
 export interface ICliOptions {
@@ -21,6 +21,7 @@ program
   .parse(process.argv)
 
 const { a, b } = program.opts<ICliOptions>()
+
 void (async () => {
   const addendA = parseFloat(a)
   const addendB = parseFloat(b)

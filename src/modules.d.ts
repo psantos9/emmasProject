@@ -6,5 +6,7 @@ declare namespace NodeJS {
   export interface ProcessEnv {
     LEANIX_HOST: string
     LEANIX_APITOKEN: string
+    LEANIX_WORKSPACE_ID: string
+    LEANIX_ACCOUNT_ID: string
   }
 }
